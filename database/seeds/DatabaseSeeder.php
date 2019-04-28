@@ -12,15 +12,17 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // $this->call(UsersTableSeeder::class);
-        // los seed se utilizan para agregar registro a nuestra base de datos
+
+
+        // los seed se utilizan para agregar registros a nuestra base de datos
     	// DB::table('users')->insert([
     	// 	'first_name' => 'jonathan',
     	// 	'last_name' => 'castro',
     	// 	'email' => 'admin@hotmail.com',
     	// 	'password' => bcrypt('123'),
-    	// 	'country' => 1,
-    	// 	'state' => 1,
-    	// 	'role' => 'admin'
+    	// 	'id_country' => 7,
+    	// 	'id_state' => 7,
+    	// 	'id_role' => 1
     	// ]);
 
     	// DB::table('users')->insert([
@@ -28,26 +30,60 @@ class DatabaseSeeder extends Seeder
     	// 	'last_name' => 'chacon',
     	// 	'email' => 'maria@hotmail.com',
     	// 	'password' => bcrypt('123'),
-    	// 	'country' => 1,
-    	// 	'state' => 1,
-    	// 	'role' => 'user'
+    	// 	'id_country' => 6,
+    	// 	'id_state' => 6,
+    	// 	'id_role' => 2
     	// ]);
 
+        // DB::table('users')->insert([
+        //     'first_name' => 'steve',
+        //     'last_name' => 'smith',
+        //     'email' => 'carlos@hotmail.com',
+        //     'password' => bcrypt('123'),
+        //     'id_country' => 5,
+        //     'id_state' => 5,
+        //     'id_role' => 2
+        // ]);
 
-        DB::table('countrys')->insert([          
-            'country' => 'venezuela'
-        ]);
+        // hay que insertarlo 1 por 1, si no se inserta el ultimo nada mas
+        // DB::table('countrys')->insert([          
+        //     // 'country' => 'argentina'
+        //     // 'country' => 'bolivia'
+        //     // 'country' => 'chile'
+        //     // 'country' => 'colombia'
+        //     // 'country' => 'estados Unidos'
+        //     // 'country' => 'méxico'          
+        //     // 'country' => 'venezuela'
 
-        DB::table('countrys')->insert([          
-            'country' => 'Argentina'
-        ]);
+        // ]);
 
-        DB::table('countrys')->insert([          
-            'country' => 'Bolivia'
-        ]);
+        // DB::table('states')->insert([          
+        //     // 'state' => 'buenos Aires',
+        //     // 'id_country' => 1
 
+        //     // 'state' => 'sucre',
+        //     // 'id_country' => 2
 
+        //     // 'state' => 'santiago de Chile',
+        //     // 'id_country' => 3
 
+        //     // 'state' => 'bogotá',
+        //     // 'id_country' => 4
+
+        //     // 'state' => 'washington D.C',
+        //     // 'id_country' => 5
+
+        //     // 'state' => 'ciudad de México',
+        //     // 'id_country' => 6
+
+        //     // 'state' => 'caracas',
+        //     // 'id_country' => 7
+        // ]);
+
+        // DB::table('roles')->insert([          
+        //     'role' => 'admin'
+        //     // 'role' => 'user'
+        // ]);
 
     }
 }

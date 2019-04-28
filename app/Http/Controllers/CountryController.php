@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 // agregamos el namespace del modelo para poder usar los metodos etc
 use App\Countrys;
 
-class CountrysController extends Controller
+class CountryController extends Controller
 {
     /**
      * Display a listing of the resource.
