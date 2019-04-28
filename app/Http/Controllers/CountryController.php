@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 // agregamos el namespace del modelo para poder usar los metodos etc
-use App\Countrys;
+use App\Country;
 
 class CountryController extends Controller
 {
@@ -16,13 +16,13 @@ class CountryController extends Controller
      */
     public function index()
     {
-        $countrys = Countrys::all();
+        $countrys = Country::all();
 
         // print_r($countrys);
 
 
         return response()
-        ->json(['data' => $countrys]);
+        ->json($countrys);
 
     }
 
