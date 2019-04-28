@@ -17,8 +17,10 @@ class RedirectIfAuthenticated
      */
     public function handle($request, Closure $next, $guard = null)
     {
+        // pendiente con este midleware, te redigire cada rato, si cambias algo 
+        // y no hes cerrado la session
         if (Auth::guard($guard)->check()) {
-            return redirect('/home');
+            return redirect('/login');
         }
 
         return $next($request);
