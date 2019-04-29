@@ -48,12 +48,13 @@ Route::get('admin/dashboard', 'DashboardController@index')->name('dashboard');
 
 // Route::get('/admin/users/view', 'UserController@index')->name('adminu');
 
-Route::get('admin/users/view', ['as'=>'admin/users/view','uses'=>'UserController@index'])->name('adminu');
+// quitar el midleware de la ruta cuando no reconosca links, por ejemplo ->name('midleware');
+Route::get('admin/users/view', ['as'=>'admin/users/view','uses'=>'UserController@index']);
 
 // Route::get('/admin/users/add', 'UserController@add')->name('admina');
 
 
-Route::get('admin/users/add', ['as'=>'admin/users/add','uses'=>'UserController@add'])->name('admina');
+Route::get('admin/users/add', ['as'=>'admin/users/add','uses'=>'UserController@add']);
 
 
 
