@@ -36,7 +36,7 @@ class LoginController extends Controller
      */
 
     // cuando inicio session hace redirect al dashboard
-    protected $redirectTo = '/dashboard';
+    protected $redirectTo = 'admin/dashboard';
 
     /**
      * Create a new controller instance.

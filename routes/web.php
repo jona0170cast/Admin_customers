@@ -43,9 +43,20 @@ Route::post('logout', 'Auth\LoginController@logout')->name('logout');
 
 // Route::get('/', ['uses'=>'CountryController@index']);
 
-Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
+Route::get('admin/dashboard', 'DashboardController@index')->name('dashboard');
 
 
-Route::get('/countrys', 'CountryController@index');
+// Route::get('/admin/users/view', 'UserController@index')->name('adminu');
 
-// Route::get('/home', 'CountryController@index');
+Route::get('admin/users/view', ['as'=>'admin/users/view','uses'=>'UserController@index'])->name('adminu');
+
+// Route::get('/admin/users/add', 'UserController@add')->name('admina');
+
+
+Route::get('admin/users/add', ['as'=>'admin/users/add','uses'=>'UserController@add'])->name('admina');
+
+
+
+Route::get('countrys', 'CountryController@index');
+
+
