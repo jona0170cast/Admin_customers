@@ -60,3 +60,7 @@ Route::get('admin/users/add', ['as'=>'admin/users/add','uses'=>'UserController@a
 Route::get('countrys', 'CountryController@index');
 
 
+
+Route::get('getusers', 'ApiController@getUsers');
+
+
