@@ -1102,6 +1102,7 @@ Vue.component('tableusers', __webpack_require__(43));
 
 var app = new Vue({
   el: '#app'
+
 });
 
 /***/ }),
@@ -44821,52 +44822,23 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
+    data: function data() {
+        return {
+            users: null
+        };
+    },
     mounted: function mounted() {
-        console.log('Component mounted.');
+        var _this = this;
+
+        axios.get('http://127.0.0.1:8000/getusers').then(function (response) {
+            return _this.users = response.data;
+        }
+        // console.log(response.data)
+        ).catch(function (error) {
+            return console.log(error);
+        });
     }
 });
 
@@ -44878,163 +44850,85 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("div", { staticClass: "card shadow mb-4" }, [
+    _vm._m(0),
+    _vm._v(" "),
+    _c("div", { staticClass: "card-body" }, [
+      _c("div", { staticClass: "table-responsive" }, [
+        _c(
+          "table",
+          {
+            staticClass: "table table-bordered",
+            attrs: { id: "dataTable", width: "100%", cellspacing: "0" }
+          },
+          [
+            _vm._m(1),
+            _vm._v(" "),
+            _c(
+              "tbody",
+              _vm._l(_vm.users, function(data) {
+                return _c("tr", [
+                  _c("td", [_vm._v(_vm._s(data.id) + " ")]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v(_vm._s(data.first_name) + " ")]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v(_vm._s(data.last_name) + " ")]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v(_vm._s(data.email) + " ")]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v(_vm._s(data.id_country) + " ")]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v(_vm._s(data.id_state) + " ")]),
+                  _vm._v(" "),
+                  _c("th", [_vm._v(_vm._s(data.id_role) + " ")]),
+                  _vm._v(" "),
+                  _c("th", [_vm._v(_vm._s(data.created_at) + " ")]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v("botones")])
+                ])
+              }),
+              0
+            )
+          ]
+        )
+      ])
+    ])
+  ])
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "card shadow mb-4" }, [
-      _c("div", { staticClass: "card-header py-3" }, [
-        _c("h6", { staticClass: "m-0 font-weight-bold text-primary" }, [
-          _vm._v("Table")
-        ])
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "card-body" }, [
-        _c("div", { staticClass: "table-responsive" }, [
-          _c(
-            "table",
-            {
-              staticClass: "table table-bordered",
-              attrs: { id: "dataTable", width: "100%", cellspacing: "0" }
-            },
-            [
-              _c("thead", [
-                _c("tr", [
-                  _c("th", [_vm._v("Name")]),
-                  _vm._v(" "),
-                  _c("th", [_vm._v("Position")]),
-                  _vm._v(" "),
-                  _c("th", [_vm._v("Office")]),
-                  _vm._v(" "),
-                  _c("th", [_vm._v("Age")]),
-                  _vm._v(" "),
-                  _c("th", [_vm._v("Start date")]),
-                  _vm._v(" "),
-                  _c("th", [_vm._v("Salary")])
-                ])
-              ]),
-              _vm._v(" "),
-              _c("tfoot", [
-                _c("tr", [
-                  _c("th", [_vm._v("Name")]),
-                  _vm._v(" "),
-                  _c("th", [_vm._v("Position")]),
-                  _vm._v(" "),
-                  _c("th", [_vm._v("Office")]),
-                  _vm._v(" "),
-                  _c("th", [_vm._v("Age")]),
-                  _vm._v(" "),
-                  _c("th", [_vm._v("Start date")]),
-                  _vm._v(" "),
-                  _c("th", [_vm._v("Salary")])
-                ])
-              ]),
-              _vm._v(" "),
-              _c("tbody", [
-                _c("tr", [
-                  _c("td", [_vm._v("Tiger Nixon")]),
-                  _vm._v(" "),
-                  _c("td", [_vm._v("System Architect")]),
-                  _vm._v(" "),
-                  _c("td", [_vm._v("Edinburgh")]),
-                  _vm._v(" "),
-                  _c("td", [_vm._v("61")]),
-                  _vm._v(" "),
-                  _c("td", [_vm._v("2011/04/25")]),
-                  _vm._v(" "),
-                  _c("td", [_vm._v("$320,800")])
-                ]),
-                _vm._v(" "),
-                _c("tr", [
-                  _c("td", [_vm._v("Garrett Winters")]),
-                  _vm._v(" "),
-                  _c("td", [_vm._v("Accountant")]),
-                  _vm._v(" "),
-                  _c("td", [_vm._v("Tokyo")]),
-                  _vm._v(" "),
-                  _c("td", [_vm._v("63")]),
-                  _vm._v(" "),
-                  _c("td", [_vm._v("2011/07/25")]),
-                  _vm._v(" "),
-                  _c("td", [_vm._v("$170,750")])
-                ]),
-                _vm._v(" "),
-                _c("tr", [
-                  _c("td", [_vm._v("Ashton Cox")]),
-                  _vm._v(" "),
-                  _c("td", [_vm._v("Junior Technical Author")]),
-                  _vm._v(" "),
-                  _c("td", [_vm._v("San Francisco")]),
-                  _vm._v(" "),
-                  _c("td", [_vm._v("66")]),
-                  _vm._v(" "),
-                  _c("td", [_vm._v("2009/01/12")]),
-                  _vm._v(" "),
-                  _c("td", [_vm._v("$86,000")])
-                ]),
-                _vm._v(" "),
-                _c("tr", [
-                  _c("td", [_vm._v("Cedric Kelly")]),
-                  _vm._v(" "),
-                  _c("td", [_vm._v("Senior Javascript Developer")]),
-                  _vm._v(" "),
-                  _c("td", [_vm._v("Edinburgh")]),
-                  _vm._v(" "),
-                  _c("td", [_vm._v("22")]),
-                  _vm._v(" "),
-                  _c("td", [_vm._v("2012/03/29")]),
-                  _vm._v(" "),
-                  _c("td", [_vm._v("$433,060")])
-                ]),
-                _vm._v(" "),
-                _c("tr", [
-                  _c("td", [_vm._v("Airi Satou")]),
-                  _vm._v(" "),
-                  _c("td", [_vm._v("Accountant")]),
-                  _vm._v(" "),
-                  _c("td", [_vm._v("Tokyo")]),
-                  _vm._v(" "),
-                  _c("td", [_vm._v("33")]),
-                  _vm._v(" "),
-                  _c("td", [_vm._v("2008/11/28")]),
-                  _vm._v(" "),
-                  _c("td", [_vm._v("$162,700")])
-                ]),
-                _vm._v(" "),
-                _c("tr", [
-                  _c("td", [_vm._v("Brielle Williamson")]),
-                  _vm._v(" "),
-                  _c("td", [_vm._v("Integration Specialist")]),
-                  _vm._v(" "),
-                  _c("td", [_vm._v("New York")]),
-                  _vm._v(" "),
-                  _c("td", [_vm._v("61")]),
-                  _vm._v(" "),
-                  _c("td", [_vm._v("2012/12/02")]),
-                  _vm._v(" "),
-                  _c("td", [_vm._v("$372,000")])
-                ]),
-                _vm._v(" "),
-                _c("tr", [
-                  _c("td", [_vm._v("Herrod Chandler")]),
-                  _vm._v(" "),
-                  _c("td", [_vm._v("Sales Assistant")]),
-                  _vm._v(" "),
-                  _c("td", [_vm._v("San Francisco")]),
-                  _vm._v(" "),
-                  _c("td", [_vm._v("59")]),
-                  _vm._v(" "),
-                  _c("td", [_vm._v("2012/08/06")]),
-                  _vm._v(" "),
-                  _c("td", [_vm._v("$137,500")])
-                ])
-              ])
-            ]
-          )
-        ])
+    return _c("div", { staticClass: "card-header py-3" }, [
+      _c("h6", { staticClass: "m-0 font-weight-bold text-primary" }, [
+        _vm._v("Table")
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("thead", [
+      _c("tr", [
+        _c("th", [_vm._v("#")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("First Name")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("Last Name")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("Email")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("Country")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("State")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("Role")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("Created At")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("Actions")])
       ])
     ])
   }

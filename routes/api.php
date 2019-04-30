@@ -20,4 +20,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 
 
-Route::get('getusers', 'ApiController@getUsers');
+// Route::get('getusers', 'ApiController@getUsers');
