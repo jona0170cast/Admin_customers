@@ -4,6 +4,8 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
+
+
 class Country extends Model
 {
 
@@ -13,8 +15,18 @@ class Country extends Model
 
     // para proteger que ingresen datos maliciosos desde el html por ejemplo
 	protected $fillable = [
-		'id_country','country'
-	];  
+		'id','country'
+	];
+
+	// Uno a Mucho(hasMany)
+	public function state()
+	{
+		// return $this->hasMany('App\State','id_country','id_country');
+
+		return $this->hasMany('App\State');
+
+
+	}  
 
 
 }
