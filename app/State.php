@@ -13,14 +13,14 @@ use Illuminate\Database\Eloquent\Model;
 
 class State extends Model
 {
-    protected $table = "states";
+	protected $table = "states";
 
-   
+	
 	protected $fillable = [
-		'id_state','states','id_country'
+		'id','states','id_country'
 	];
 
-    // de uno a uno hasOne
+	
 	public function country()
 	{
 		// return $this->belongsTo('App\Country','id_country','id_state');
@@ -29,10 +29,7 @@ class State extends Model
 		// tabla que va a buscar, y la otra tabla id nada mas
 		// belogto pertenece
 		return $this->belongsTo('App\Country');
-
-		// return $this->hasOne('App\Country');
-
 		
 	}  
- 
+	
 }

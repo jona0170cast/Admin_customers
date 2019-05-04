@@ -28,42 +28,54 @@ class ApiController extends Controller
 	public function getUsers()
 	{
 
-		$users = User::all();
+		// con el metodo with() relaciono las 3 tablas de una vez
+		$users = User::with('role')
+		->with('country')
+		->with('state')
+		->get();				
 
-		return response()
-		->json($users);	
-
-
+		return response($users);
 	}
 
+		// public function getUsers()
+	// {
+
+	// 	$users = User::all();
+
+	// 	return response()
+	// 	->json($users);	
 
 
-		public function testRelaciones()
-	{		
-
-		// de esta forma accedo a todo
-		$countrys = State::with('country')->get();	
-
-		return response($countrys);
-
-		// return response()
-		// ->json($countrys);
-
-	
-        // de esta forma accedo a todo pero con objetos
-        // donde ->country es el metodo creado en el modelo
-		// $countrys = State::all();	
-
-		// foreach ($countrys as $test ) {
-		// 	echo $test->country->country;
-		// }
+	// }
 
 
-		// return response()
-		// ->json($countrys);
+
+	// public function testRelaciones()
+	// {		
+
+	// 	// de esta forma accedo a todo
+	// 	$countrys = State::with('country')->get();	
+
+	// 	return response($countrys);
+
+	// 	// return response()
+	// 	// ->json($countrys);
 
 
-	}
+ //        // de esta forma accedo a todo pero con objetos
+ //        // donde ->country es el metodo creado en el modelo
+	// 	// $countrys = State::all();	
+
+	// 	// foreach ($countrys as $test ) {
+	// 	// 	echo $test->country->country;
+	// 	// }
+
+
+	// 	// return response()
+	// 	// ->json($countrys);
+
+
+	// }
 
 
 

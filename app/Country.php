@@ -16,17 +16,6 @@ class Country extends Model
     // para proteger que ingresen datos maliciosos desde el html por ejemplo
 	protected $fillable = [
 		'id','country'
-	];
-
-	// Uno a Mucho(hasMany)
-	public function state()
-	{
-		// return $this->hasMany('App\State','id_country','id_country');
-
-		return $this->hasMany('App\State');
-
-
-	}  
-
+	];	
 
 }

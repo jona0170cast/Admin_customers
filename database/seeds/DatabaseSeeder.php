@@ -20,9 +20,9 @@ class DatabaseSeeder extends Seeder
     	// 	'last_name' => 'castro',
     	// 	'email' => 'admin@hotmail.com',
     	// 	'password' => bcrypt('123'),
-    	// 	'id_country' => 7,
-    	// 	'id_state' => 7,
-    	// 	'id_role' => 1
+    	// 	'country_id' => 7,
+    	// 	'state_id' => 7,
+    	// 	'role_id' => 1
     	// ]);
 
     	// DB::table('users')->insert([
@@ -30,9 +30,9 @@ class DatabaseSeeder extends Seeder
     	// 	'last_name' => 'chacon',
     	// 	'email' => 'maria@hotmail.com',
     	// 	'password' => bcrypt('123'),
-    	// 	'id_country' => 6,
-    	// 	'id_state' => 6,
-    	// 	'id_role' => 2
+    	// 	'country_id' => 6,
+    	// 	'state_id' => 6,
+    	// 	'role_id' => 2
     	// ]);
 
         // DB::table('users')->insert([
@@ -40,9 +40,9 @@ class DatabaseSeeder extends Seeder
         //     'last_name' => 'smith',
         //     'email' => 'carlos@hotmail.com',
         //     'password' => bcrypt('123'),
-        //     'id_country' => 5,
-        //     'id_state' => 5,
-        //     'id_role' => 2
+        //     'country_id' => 5,
+        //     'state_id' => 5,
+        //     'role_id' => 2
         // ]);
 
         // hay que insertarlo 1 por 1, si no se inserta el ultimo nada mas
@@ -59,25 +59,25 @@ class DatabaseSeeder extends Seeder
 
         // DB::table('states')->insert([          
         //     // 'state' => 'buenos Aires',
-        //     // 'id_country' => 1
+        //     // 'country_id' => 1
 
         //     // 'state' => 'sucre',
-        //     // 'id_country' => 2
+        //     // 'country_id' => 2
 
         //     // 'state' => 'santiago de Chile',
-        //     // 'id_country' => 3
+        //     // 'country_id' => 3
 
         //     // 'state' => 'bogotá',
-        //     // 'id_country' => 4
+        //     // 'country_id' => 4
 
         //     // 'state' => 'washington D.C',
-        //     // 'id_country' => 5
+        //     // 'country_id' => 5
 
         //     // 'state' => 'ciudad de México',
-        //     // 'id_country' => 6
+        //     // 'country_id' => 6
 
         //     // 'state' => 'caracas',
-        //     // 'id_country' => 7
+        //     // 'country_id' => 7
         // ]);
 
         // DB::table('roles')->insert([          

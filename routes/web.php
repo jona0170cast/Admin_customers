@@ -49,7 +49,7 @@ Route::get('admin/dashboard', 'DashboardController@index')->name('dashboard');
 // Route::get('/admin/users/view', 'UserController@index')->name('adminu');
 
 // quitar el midleware de la ruta cuando no reconosca links, por ejemplo ->name('midleware');
-// agregar el name(el midleware), el nombre de la ruta para que la reconosca en la navegacion
+// agregar el ->name(el midleware), el nombre de la ruta para que la reconosca en la navegacion
 Route::get('admin/users/view', ['as'=>'admin/users/view','uses'=>'UserController@index']);
 
 // Route::get('/admin/users/add', 'UserController@add')->name('admina');
