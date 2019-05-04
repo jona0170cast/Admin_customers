@@ -12,7 +12,7 @@
 
 	<div id="app">
 		
-		<tableusers></tableusers> 		
+		<table-users></table-users> 		
 	</div> 
 
 

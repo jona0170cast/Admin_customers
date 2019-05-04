@@ -20,7 +20,7 @@
                             <th>Country</th>
                             <th>State</th>
                             <th>Role</th>
-                            <th>Created At</th>
+                            <!-- <th>Created At</th> -->
                             <th>Actions</th>
                         </tr>
                     </thead>                   
@@ -30,10 +30,10 @@
                             <td>{{ data.first_name }} </td>
                             <td>{{ data.last_name }} </td>
                             <td>{{ data.email }} </td>
-                            <td>{{ data.id_country }} </td>
-                            <td>{{ data.id_state }} </td>
-                            <th>{{ data.id_role }} </th>
-                            <th>{{ data.created_at }} </th>
+                            <td>{{ data.country.country }} </td>
+                            <td>{{ data.state.state }} </td>
+                            <th>{{ data.role.role }} </th>
+                           <!--  <th>{{ data.created_at }} </th> -->
                             <td>botones</td>                            
                         </tr> 
                     </tbody>
@@ -63,7 +63,7 @@
             .get('http://127.0.0.1:8000/getusers')
             .then(response =>
                 (this.users = response.data)
-                // console.log(response.data)
+                // console.log(response.data)               
                 )
             .catch(error =>
              console.log(error)

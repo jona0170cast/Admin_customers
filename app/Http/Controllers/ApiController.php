@@ -4,17 +4,18 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-// agregamos el namespace del modelo para poder usar los metodos etc
+// agregamos el namespace del modelo para poder usar los metodos,relaciones etc
 use App\User;
 
-use App\State;
+// use App\State;
 
-use App\Country;
+// use App\Country;
 
-use App\Role;
+// use App\Role;
 
 class ApiController extends Controller
 {
+	
 	// controlador para crear Api Rest
 
 	public function index()
@@ -29,9 +30,9 @@ class ApiController extends Controller
 	{
 
 		// con el metodo with() relaciono las 3 tablas de una vez
-		$users = User::with('role')
-		->with('country')
+		$users = User::with('country')
 		->with('state')
+		->with('role')
 		->get();				
 
 		return response($users);
