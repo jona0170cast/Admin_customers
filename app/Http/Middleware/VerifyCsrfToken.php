@@ -12,6 +12,8 @@ class VerifyCsrfToken extends Middleware
      * @var array
      */
     protected $except = [
-        //
+         // importante agregar /* para eliminar el error 419 del token,
+        // esto se aplica a todo lo relacionado a la ruta
+    	'login/*','dashboard/*'
     ];
 }

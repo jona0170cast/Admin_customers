@@ -2,8 +2,15 @@
 
 namespace App\Http\Controllers\Auth;
 
+// namespace App\Http\Controllers;
+
+// use Illuminate\Http\Request;
+
+// use App\Http\Controllers\Auth\Request;
+
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+// use Illuminate\Foundation\Auth\RedirectsUsers;
 
 class LoginController extends Controller
 {
@@ -20,12 +27,16 @@ class LoginController extends Controller
 
     use AuthenticatesUsers;
 
+    // use RedirectsUsers;
+
     /**
      * Where to redirect users after login.
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+
+    // cuando inicio session hace redirect al dashboard
+    protected $redirectTo = 'admin/dashboard';
 
     /**
      * Create a new controller instance.
@@ -36,4 +47,25 @@ class LoginController extends Controller
     {
         $this->middleware('guest')->except('logout');
     }
+
+
+    // public function logout(Request $request)
+    // {
+    //     $this->guard()->logout();
+
+    //     $request->session()->invalidate();
+
+    //     return redirect('/');
+    // }
+
+    // public function redirectPath()
+    // {
+    //     if (method_exists($this, 'redirectTo')) {
+    //         return $this->redirectTo();
+    //     }
+
+    //     return property_exists($this, 'redirectTo') ? $this->redirectTo : '/login';
+    // }
+
+
 }
